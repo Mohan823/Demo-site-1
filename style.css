@@ -1,0 +1,294 @@
+/* Box sizing rules */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+*::before,
+*::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+body {
+  display: flex;
+  justify-content: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+}
+
+.container-xxl {
+  background-color: rgba(255, 166, 0, 0.14);
+  max-width: 1600px;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+.splide__track {
+  overflow: visible;
+}
+
+.splide__slide {
+  transition: transform 0.3s;
+}
+.splide__slide.special {
+  position: relative;
+  color: #fff;
+}
+.splide__slide.special .online {
+  position: absolute;
+  top: 2%;
+  right: 3%;
+}
+.splide__slide.special .timing {
+  position: absolute;
+  bottom: 0%;
+}
+.splide__slide.special .timing p {
+  max-width: 80%;
+  font-size: 0.825rem;
+}
+.splide__slide:hover {
+  transform: scale(1.03);
+}
+.splide__slide img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
+}
+
+#basic-addon2 {
+  background-color: var(--dark);
+}
+
+input[type=text] {
+  color: #fff;
+}
+input[type=text]:focus {
+  color: #fff;
+}
+
+.showcase {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.showcase .splide__slide img {
+  min-height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.showcase .timer {
+  color: #fff;
+  position: absolute;
+  top: 20%;
+  right: 10%;
+  z-index: 20;
+  text-align: right;
+}
+@media (max-width: 576px) {
+  .showcase .timer {
+    right: 25%;
+  }
+}
+.showcase .timer p {
+  font-size: 1.3rem;
+}
+@media (max-width: 576px) {
+  .showcase .timer p {
+    font-size: 1rem;
+  }
+}
+.showcase .timer time {
+  color: hsl(39deg, 100%, 55%);
+  line-height: 1;
+  font-size: 3rem;
+  text-shadow: 2px 2px 4px rgba(255, 0, 0, 0.578);
+}
+@media (max-width: 576px) {
+  .showcase .timer time {
+    font-size: 2rem;
+  }
+}
+.showcase .timer time span {
+  text-align: center;
+  margin-left: 1rem;
+  margin-right: 0.6rem;
+}
+@media (max-width: 576px) {
+  .showcase .timer time span {
+    margin-left: 0rem;
+  }
+}
+.showcase .timer span {
+  text-align: center;
+  margin-left: 3.5rem;
+  margin-right: 0.8rem;
+}
+@media (max-width: 576px) {
+  .showcase .timer span {
+    margin-left: 0rem;
+  }
+}
+.showcase .social {
+  position: absolute;
+  top: 80%;
+  right: 10%;
+  z-index: 30;
+}
+.showcase .social a {
+  background-color: transparent;
+  color: #fff;
+  padding: 0.5rem;
+}
+@media (max-width: 576px) {
+  .showcase .social {
+    display: none;
+  }
+}
+
+.offer p {
+  font-size: 2rem;
+}
+@media (max-width: 768px) {
+  .offer p {
+    font-size: 1.2rem;
+    margin-left: 1rem;
+  }
+}
+.offer button {
+  font-size: 1rem;
+}
+@media (max-width: 768px) {
+  .offer button {
+    font-size: 0.8rem;
+  }
+}
+
+.container-event {
+  background: url(images/bg/back.png);
+  color: white;
+}
+.container-event .container-event-wrapper {
+  margin-left: 15%;
+  max-width: 27rem;
+}
+
+.milestones > * {
+  max-width: 10rem;
+}
+@media (max-width: 576px) {
+  .milestones > * {
+    max-width: 15rem;
+  }
+  .milestones > *:not(:first-child) {
+    margin-top: 3rem;
+  }
+}
+.milestones img {
+  margin-bottom: 1rem;
+  width: 50%;
+}
+
+footer {
+  box-sizing: border-box;
+  color: white;
+  background: no-repeat top left/cover url(images/bg/bg\ ig.png);
+}
+footer .more-info {
+  border: 2px solid #000;
+}
+footer .event {
+  clear: both;
+  padding-bottom: 2rem;
+}
+footer .event > img {
+  margin-right: 1rem;
+  float: left;
+  width: 5rem;
+  border: 2px solid #fff;
+  border-radius: 0.2rem;
+}
+footer a {
+  color: #fff;
+}
+footer .secondary-navs li {
+  padding-bottom: 1rem;
+}
+footer h3 {
+  margin-bottom: 1.5rem;
+}
+footer h4 {
+  font-size: 1rem;
+}
+footer .contact-info {
+  padding-right: 1rem;
+}
+footer .contact-info li {
+  margin-left: 1rem;
+}
+footer .contact-info img {
+  width: 30px;
+  height: 30px;
+}
+footer .download-app img {
+  width: 10rem;
+}/*# sourceMappingURL=style.css.map */

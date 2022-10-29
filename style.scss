@@ -1,0 +1,287 @@
+@import "partials/partials",
+url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+
+$clr-primary: hsl(40, 88%, 55%);
+
+body {
+    display: flex;
+    justify-content: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+}
+
+.container-xxl {
+    background-color: rgba(255, 166, 0, 0.14);
+    max-width: 1600px;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.splide__track {
+    overflow: visible;
+}
+
+.splide__slide {
+    transition: transform 0.3s;
+
+    &.special {
+        position: relative;
+        color: #fff;
+
+        .online {
+            position: absolute;
+            top: 2%;
+            right: 3%;
+
+        }
+
+        .timing {
+            position: absolute;
+            bottom: 0%;
+
+            p {
+                max-width: 80%;
+                font-size: 0.825rem;
+            }
+
+        }
+
+
+
+    }
+
+    &:hover {
+        transform: scale(1.03);
+    }
+
+    img {
+        width: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+}
+
+#basic-addon2 {
+    background-color: var(--dark);
+}
+
+input[type="text"] {
+    color: #fff;
+
+    &:focus {
+        color: #fff;
+    }
+}
+
+
+// Show case
+.showcase {
+    .splide__slide {
+        img {
+            min-height: 200px;
+            object-fit: cover;
+        }
+    }
+
+    object-fit: cover;
+
+    .timer {
+        color: #fff;
+        position: absolute;
+        top: 20%;
+        right: 10%;
+        z-index: 20;
+        text-align: right;
+
+        @media (max-width: 576px) {
+            right: 25%;
+        }
+
+        p {
+
+            @media (max-width: 576px) {
+                font-size: 1rem;
+            }
+
+            font-size: 1.3rem;
+        }
+
+        time {
+            color: hsl(39, 100%, 55%);
+            line-height: 1;
+            font-size: 3rem;
+            text-shadow: 2px 2px 4px rgba(255, 0, 0, 0.578);
+
+            @media (max-width: 576px) {
+                font-size: 2rem;
+            }
+
+            span {
+                text-align: center;
+                margin-left: 1rem;
+                margin-right: 0.6rem;
+
+                @media (max-width: 576px) {
+                    margin-left: 0rem;
+
+                }
+            }
+        }
+
+        span {
+            text-align: center;
+            margin-left: 3.5rem;
+            margin-right: 0.8rem;
+
+            @media (max-width: 576px) {
+                margin-left: 0rem;
+
+            }
+        }
+
+    }
+
+    .social {
+        position: absolute;
+        top: 80%;
+        right: 10%;
+        z-index: 30;
+
+        a {
+            background-color: transparent;
+            color: #fff;
+            padding: 0.5rem;
+        }
+
+        @media (max-width: 576px) {
+            display: none;
+        }
+    }
+}
+
+.offer {
+    p {
+        font-size: 2rem;
+
+        @media (max-width: 768px) {
+            font-size: 1.2rem;
+            margin-left: 1rem;
+        }
+    }
+
+    button {
+        font-size: 1rem;
+
+        @media (max-width: 768px) {
+            font-size: 0.8rem;
+        }
+    }
+}
+
+//  Event
+
+.container-event {
+    background: url(images/bg/back.png);
+    color: white;
+
+
+    .container-event-wrapper {
+        margin-left: 15%;
+        max-width: 27rem;
+
+    }
+}
+
+// Milestone
+
+.milestones {
+    >* {
+        max-width: 10rem;
+
+        @media(max-width: 576px) {
+
+            &:not(:first-child) {
+                margin-top: 3rem;
+            }
+
+            max-width: 15rem;
+        }
+    }
+
+
+    img {
+        margin-bottom: 1rem;
+        width: 50%;
+
+    }
+}
+
+
+
+// Footer Part
+
+footer {
+    box-sizing: border-box;
+    color: white;
+    background: no-repeat top left/cover url(images/bg/bg\ ig.png);
+
+    .more-info {
+        border: 2px solid #000;
+    }
+
+    .event {
+
+        clear: both;
+        padding-bottom: 2rem;
+
+        >img {
+            margin-right: 1rem;
+            float: left;
+            width: 5rem;
+            border: 2px solid #fff;
+            border-radius: 0.2rem;
+        }
+    }
+
+    a {
+        color: #fff;
+
+    }
+
+    .secondary-navs {
+        li {
+            padding-bottom: 1rem;
+        }
+    }
+
+    h3 {
+        margin-bottom: 1.5rem;
+    }
+
+    h4 {
+        font-size: 1rem;
+    }
+
+    .contact-info {
+        padding-right: 1rem;
+
+        li {
+            margin-left: 1rem;
+        }
+
+        img {
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+    .download-app {
+        img {
+            width: 10rem;
+        }
+    }
+}
